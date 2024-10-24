@@ -1,0 +1,47 @@
+---
+- hosts: all
+  become: True # yes/no 1/0
+  #become_user: root
+  ignore_errors: true
+  gather_facts: true
+
+
+  tasks:
+      - name: Create a file
+        file: 
+          path: /tmp/playbook_file
+          mode: '0755'
+          state: touch
+        tags: 
+          - file_creation
+
+      - name: Create a directory
+        file:
+          path: /tmp/dir
+          mode: '0700'
+          state: directory
+        tags: 
+          - dir_creation
+
+      - name: Create group security
+        group:
+          name: security
+          state: present
+        tags:
+          - grp_creation
+
+      - name: Create user Idriss
+        user: 
+          name: Idriss
+          comment: Idriss Bakayoko
+          shell: /bin/bash
+          group: security
+        # when: ansible_os_family == "Debian" or ansible_processor_nproc > 2
+        tags:
+          - user_creation  
+
+      - name: Check uptime 
+        command: uptime # if no module exist 
+
+      - name: Check the date
+        shell: date # if no module exist   

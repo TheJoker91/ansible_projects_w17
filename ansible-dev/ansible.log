@@ -1,0 +1,39 @@
+2024-10-22 02:57:57,417 p=8198 u=ec2-user n=ansible | PLAY [all] ************************************************************************
+2024-10-22 02:57:57,427 p=8198 u=ec2-user n=ansible | TASK [Gathering Facts] ************************************************************
+2024-10-22 02:57:58,949 p=8198 u=ec2-user n=ansible | ok: [172.31.17.85]
+2024-10-22 02:57:59,018 p=8198 u=ec2-user n=ansible | ok: [172.31.36.110]
+2024-10-22 02:57:59,032 p=8198 u=ec2-user n=ansible | TASK [Create a file] **************************************************************
+2024-10-22 02:57:59,555 p=8198 u=ec2-user n=ansible | changed: [172.31.17.85]
+2024-10-22 02:57:59,559 p=8198 u=ec2-user n=ansible | changed: [172.31.36.110]
+2024-10-22 02:57:59,567 p=8198 u=ec2-user n=ansible | TASK [Create a directory] *********************************************************
+2024-10-22 02:57:59,951 p=8198 u=ec2-user n=ansible | ok: [172.31.17.85]
+2024-10-22 02:57:59,953 p=8198 u=ec2-user n=ansible | ok: [172.31.36.110]
+2024-10-22 02:57:59,965 p=8198 u=ec2-user n=ansible | TASK [Create group security] ******************************************************
+2024-10-22 02:58:00,781 p=8198 u=ec2-user n=ansible | ok: [172.31.36.110]
+2024-10-22 02:58:00,838 p=8198 u=ec2-user n=ansible | ok: [172.31.17.85]
+2024-10-22 02:58:00,845 p=8198 u=ec2-user n=ansible | TASK [Create user Idriss] *********************************************************
+2024-10-22 02:58:01,514 p=8198 u=ec2-user n=ansible | ok: [172.31.36.110]
+2024-10-22 02:58:01,651 p=8198 u=ec2-user n=ansible | ok: [172.31.17.85]
+2024-10-22 02:58:01,669 p=8198 u=ec2-user n=ansible | TASK [Check uptime] ***************************************************************
+2024-10-22 02:58:02,283 p=8198 u=ec2-user n=ansible | changed: [172.31.36.110]
+2024-10-22 02:58:02,465 p=8198 u=ec2-user n=ansible | changed: [172.31.17.85]
+2024-10-22 02:58:02,475 p=8198 u=ec2-user n=ansible | TASK [Check the date] *************************************************************
+2024-10-22 02:58:02,934 p=8198 u=ec2-user n=ansible | changed: [172.31.36.110]
+2024-10-22 02:58:03,012 p=8198 u=ec2-user n=ansible | changed: [172.31.17.85]
+2024-10-22 02:58:03,037 p=8198 u=ec2-user n=ansible | PLAY RECAP ************************************************************************
+2024-10-22 02:58:03,037 p=8198 u=ec2-user n=ansible | 172.31.17.85               : ok=7    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-22 02:58:03,038 p=8198 u=ec2-user n=ansible | 172.31.36.110              : ok=7    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-22 02:59:32,087 p=8530 u=ec2-user n=ansible | 172.31.17.85 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.7"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-10-22 02:59:32,192 p=8530 u=ec2-user n=ansible | 172.31.36.110 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
